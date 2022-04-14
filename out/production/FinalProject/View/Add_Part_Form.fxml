@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0"
+            prefWidth="545.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controller.Add_Part_Controller">
+    <RadioButton fx:id="InHouseButton" layoutX="213.0" layoutY="34.0" mnemonicParsing="false" onAction="#InHouseButton"
+                 selected="true" text="In-House">
+        <toggleGroup>
+            <ToggleGroup fx:id="Toggle"/>
+        </toggleGroup>
+    </RadioButton>
+    <RadioButton fx:id="OutsourcedButton" layoutX="322.0" layoutY="35.0" mnemonicParsing="false"
+                 onAction="#OutsourcedButton" text="Outsourced" toggleGroup="$Toggle"/>
+    <TextField disable="true" layoutX="140.0" layoutY="182.0" text="Auto"/>
+    <TextField fx:id="nameField" layoutX="140.0" layoutY="229.0"/>
+    <TextField fx:id="invField" layoutX="140.0" layoutY="272.0"/>
+    <TextField fx:id="priceField" layoutX="140.0" layoutY="320.0"/>
+    <TextField fx:id="id_companyField" layoutX="140.0" layoutY="371.0"/>
+    <TextField fx:id="maxField" layoutX="140.0" layoutY="419.0"/>
+    <TextField fx:id="minField" layoutX="380.0" layoutY="419.0"/>
+    <Label layoutX="38.0" layoutY="28.0" text="Add Part">
+        <font>
+            <Font name="System Bold" size="18.0"/>
+        </font>
+    </Label>
+    <Label layoutX="322.0" layoutY="423.0" text="Min"/>
+    <Button fx:id="saveButton" layoutX="336.0" layoutY="481.0" mnemonicParsing="false" onAction="#savePart"
+            prefHeight="25.0" prefWidth="52.0" text="Save"/>
+    <Button layoutX="422.0" layoutY="480.0" mnemonicParsing="false" onAction="#cancel" text="Cancel"/>
+    <Label layoutX="50.0" layoutY="423.0" text="Max"/>
+    <Label layoutX="49.0" layoutY="276.0" text="Inv"/>
+    <Label layoutX="49.0" layoutY="233.0" text="Name"/>
+    <Label fx:id="toggleLabel" layoutX="48.0" layoutY="375.0" text="Machine ID"/>
+    <Label layoutX="48.0" layoutY="324.0" text="Price/Cost"/>
+    <Label layoutX="51.0" layoutY="186.0" text="ID"/>
+</AnchorPane>
